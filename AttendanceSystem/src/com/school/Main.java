@@ -2,27 +2,25 @@ package com.school;
 
 public class Main {
     public static void main(String[] args) {
-        // Create array of Students
-        Student[] students = new Student[2];
-        students[0] = new Student();
-        students[0].setDetails(1, "Alice");
-        students[1] = new Student();
-        students[1].setDetails(2, "Bob");
+        // Create Students using constructors
+        Student[] students = new Student[3];
+        students[0] = new Student("Alice");
+        students[1] = new Student("Bob");
+        students[2] = new Student("Charlie");
 
-        // Create array of Courses
-        Course[] courses = new Course[2];
-        courses[0] = new Course();
-        courses[0].setDetails(101, "Mathematics");
-        courses[1] = new Course();
-        courses[1].setDetails(102, "Computer Science");
+        // Create Courses using constructors
+        Course[] courses = new Course[3];
+        courses[0] = new Course("Mathematics");
+        courses[1] = new Course("Computer Science");
+        courses[2] = new Course("Physics");
 
-        // Display all students
+        // Display Students
         System.out.println("=== Students ===");
         for (Student s : students) {
             s.displayDetails();
         }
 
-        // Display all courses
+        // Display Courses
         System.out.println("\n=== Courses ===");
         for (Course c : courses) {
             c.displayDetails();
