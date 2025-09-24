@@ -1,25 +1,18 @@
-package com.school;
+public class Student extends Person {
+    private String gradeLevel;
 
-public class Student {
-    private static int nextStudentIdCounter = 1;
-    private int studentId;
-    private String name;
-
-    public Student(String name) {
-        this.studentId = nextStudentIdCounter++;
-        this.name = name;
+    public Student(String name, String gradeLevel) {
+        super(name);
+        this.gradeLevel = gradeLevel;
     }
 
-    // Getters (Encapsulation)
-    public int getStudentId() {
-        return this.studentId;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
+    @Override
     public void displayDetails() {
-        System.out.println("Student ID: " + this.studentId + ", Name: " + this.name);
+        super.displayDetails();
+        System.out.println("Role: Student, Grade Level: " + gradeLevel);
+    }
+
+    public String getGradeLevel() {
+        return gradeLevel;
     }
 }
